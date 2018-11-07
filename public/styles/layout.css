@@ -27,7 +27,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main {
+.container {
 	width : 450px; /* 80% */
 	margin : 180px auto;
 	background-color: white;
@@ -35,9 +35,8 @@ main {
 */	margin-top: 110px;
 	height: 100%;
 }
-.container .next-tweet:hover{
-opacity: 1;
-}
+
+
 .new-tweet {
 	background-color: lightgrey;
 	border-radius: 15px;
@@ -67,8 +66,15 @@ input {
 	margin-bottom: 4px;
 	margin-right: 2em;
 }
-
-.next-tweet {
+.tweet {
+	border-radius: 15px;
+	border: 1px solid black;
+}
+.tweet:hover{
+opacity: 1;
+border:solid gray 2px;
+}
+.tweet {
 	background-color: white;
 	border-radius: 15px black;
 	width: 400px;
@@ -79,19 +85,25 @@ input {
     float: center;
     opacity: 0.5;
 }
-.next-tweet header {
+.tweet header {
 	background-color: lightgrey;
-	/*display: flex;*/
-	border-radius: 15px;
+	display: flex;
+	border-radius: 15px 15px 0px 0px;
 	vertical-align: top;
-	overflow: auto;
+	justify-content: space-between;
+	/*overflow: auto;*/
 }
 
-.next-tweet .age {
+.tweet .age {
 border-top: 1px solid black;
 display: block;
+padding: 5px;
 }
-.next-tweet .avatar {
+.tweet-text{
+	padding: 20px;
+	display: block;
+}
+.tweet .avatar {
    /* padding: 0 2em 0 2em;*/
     padding-right: 10px;
     width: 20%;
@@ -101,8 +113,8 @@ display: block;
     display:inline-flex;
 }
 
-.handle {
-	float: right;
+header span {
+	margin-right: 10px;
 }
 
 .name {
