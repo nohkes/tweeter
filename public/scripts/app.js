@@ -4,6 +4,22 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
  $(document).ready(function() {
+
+$(function() {
+  var $button = $('.new-tweet input');
+  $button.on('click', function () {
+    event.preventDefault();
+    console.log('Button clicked, performing ajax call...');
+    $.ajax({ type: "POST", url: '/tweets', data: $('#tweet-submit').serialize()})
+    .then(function (morePostsHtml) {
+      console.log('Success: ', morePostsHtml);
+      $button.replaceWith(morePostsHtml);
+    });
+  });
+});
+
+
+
 function createTweetElement(tweetData) {
 	let $tweet = $("<article>").addClass("tweet");
 	let html = `
@@ -21,16 +37,21 @@ function createTweetElement(tweetData) {
  			${tweetData.created_at}          
  			</footer>
 	`;
-	$tweet = $tweet.append(html);
-	return $tweet
+	// $tweet = $tweet.append(html);
+	return $tweet.append(html)
 }
 
 function renderTweets(data) {
-  let $html = $('<div></div>');
+  // let $html = $('<div></div>');
   data.forEach((tweet)=> {
-    $html.append(createTweetElement(tweet));
+    $(".tweets-container").append(createTweetElement(tweet));
   })
-  $(".tweets-container").html($html);
+  // for (var el of data){
+  //   var html = createTweetElement(el);
+  //   console.log(html)
+  //   $(".tweets-container").append(html);
+  // }
+  
 }
 
 

@@ -71,8 +71,8 @@ input {
 	border: 1px solid black;
 }
 .tweet:hover{
-opacity: 1;
-border:solid gray 2px;
+	opacity: 1;
+	border:solid gray 2px;
 }
 .tweet {
 	background-color: white;
@@ -91,13 +91,14 @@ border:solid gray 2px;
 	border-radius: 15px 15px 0px 0px;
 	vertical-align: top;
 	justify-content: space-between;
+	padding-top: 5px;
 	/*overflow: auto;*/
 }
 
 .tweet .age {
-border-top: 1px solid black;
-display: block;
-padding: 5px;
+	border-top: 1px solid black;
+	display: block;
+	padding: 5px;
 }
 .tweet-text{
 	padding: 20px;
@@ -118,5 +119,5 @@ header span {
 }
 
 .name {
-display: inline-flex;
+	display: inline-flex;
 }
