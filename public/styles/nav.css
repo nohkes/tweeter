@@ -22,3 +22,21 @@
 	font-size: 2em;
 	line-height: 2.5em;
 	color: #e8fdff;
+}
+#nav-bar button {
+  float: right;
+  width: 140px;
+  height: 60px;
+  font-size: 1.5em;
+  color: #00a087;
+  border: solid black 1.7px;
+  border-radius: 4px;
+  background-color: #caf3e5;
+  margin-top: 10px;
+}
+
+#nav-bar button:hover {
+  color: black;
+  background-color: white;
+  cursor: crosshair;
+}

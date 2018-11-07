@@ -30,6 +30,10 @@ $(function() {
     // });
   });
 });
+$("button").click(function(){
+      $(".new-tweet").toggle();
+      $("textarea").focus();
+    });
 
 function loadTweets() {
   $.get('/tweets', function (data) {
