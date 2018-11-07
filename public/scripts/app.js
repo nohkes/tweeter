@@ -19,7 +19,8 @@ $(function() {
       $.ajax({ type: "POST", 
         url: '/tweets', 
         data: $('#tweet-submit').serialize(), 
-        complete: loadTweets})
+        complete: loadTweets 
+      })
     
     }
     // .then(function () {
