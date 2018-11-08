@@ -8,5 +8,7 @@ Server-side built with Node and Express and allows users to request and submit t
 The client-side is built with HTML, CSS and client-side JS.
 
 # Screenshots
-
+https://github.com/nohkes/tweeter/blob/master/Screenshot%20from%202018-11-08%2016-49-04.png
+https://github.com/nohkes/tweeter/blob/master/Screenshot%20from%202018-11-08%2016-48-42.png
+https://github.com/nohkes/tweeter/blob/master/Screenshot%20from%202018-11-08%2016-48-33.png
 
