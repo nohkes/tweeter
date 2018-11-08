@@ -128,4 +128,5 @@ header span {
 	display: none;
 	font-size: 1em;
 	color: white;
+	float right;
 }

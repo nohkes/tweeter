@@ -12,10 +12,10 @@ $(function() {
     event.preventDefault();
     if ( $(this).siblings(".counter").text() == 140) {
       $(".error").text("please enter text");
-      $(".error").toggle()
+      $(".error").slideDown()
     } else if ($(this).siblings(".counter").text() < 0){
       $(".error").text("too much text")
-      $(".error").toggle();
+      $(".error").slideDown();
     } else {
       console.log('Button clicked, performing ajax call...');
       $.ajax({ type: "POST", 
