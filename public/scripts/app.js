@@ -11,23 +11,21 @@ $(function() {
   $button.on('click', function () {
     event.preventDefault();
     if ( $(this).siblings(".counter").text() == 140) {
-      alert("please enter text")
+      $(".error").text("please enter text");
+      $(".error").toggle()
     } else if ($(this).siblings(".counter").text() < 0){
-      alert("too much text")
+      $(".error").text("too much text")
+      $(".error").toggle();
     } else {
       console.log('Button clicked, performing ajax call...');
       $.ajax({ type: "POST", 
         url: '/tweets', 
         data: $('#tweet-submit').serialize(), 
         complete: loadTweets 
-      })
+      });
     
     }
-    // .then(function () {
-    //   $(".tweets-container").append(loadTweets());
-    // //   console.log('Success: ');
-    // //   // $button.replaceWith(morePostsHtml);
-    // });
+
   });
 });
 $("button").click(function(){
@@ -60,14 +58,14 @@ function createTweetElement(tweetData) {
  			</footer>
 	`;
 	// $tweet = $tweet.append(html);
-	return $tweet.append(html)
+	return $tweet.append(html);
 }
 
 function renderTweets(data) {
   // let $html = $('<div></div>');
   data.forEach((tweet)=> {
     $(".tweets-container").append(createTweetElement(tweet));
-  })
+  });
   // for (var el of data){
   //   var html = createTweetElement(el);
   //   console.log(html)
@@ -148,5 +146,5 @@ function renderTweets(data) {
 // console.log($tweet); // to see what it looks like
 // $('.container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
-})
+});
 

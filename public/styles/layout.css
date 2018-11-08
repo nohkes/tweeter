@@ -45,6 +45,7 @@ body {
 	padding-right: 5px;
     padding-left: 5px;
     margin-top: 10px;
+   /* overflow: auto;*/
 
 }
 h2 {
@@ -122,3 +123,9 @@ header span {
 	display: inline-flex;
 }
 
+.new-tweet .error {
+	background-color: red;
+	display: none;
+	font-size: 1em;
+	color: white;
+}
