@@ -130,3 +130,16 @@ header span {
 	color: white;
 	float right;
 }
+.tweet footer span {
+  margin-top: 15px;
+  margin-right: 5px;
+  color: white;
+}
+
+.tweet footer span i {
+  margin-left: 4px;
+}
+
+.tweet:hover footer span {
+  color: #7BC3B7;
+}
